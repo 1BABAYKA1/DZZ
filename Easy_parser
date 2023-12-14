@@ -1,0 +1,7 @@
+import html
+import requests
+
+
+r = requests.get('https://www.cian.ru/kupit-kvartiru/')
+
+print(html.unescape(r.text).strip())
