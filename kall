@@ -1,0 +1,10 @@
+import requests
+from bs4 import BeautifulSoup
+import urllib
+
+soup = BeautifulSoup('response.text', 'html.parser')
+ads = soup.find_all()
+print(ads)
+for ad in ads:
+    address = ad.find(all(ads)).text.strip()
+    print(address)
